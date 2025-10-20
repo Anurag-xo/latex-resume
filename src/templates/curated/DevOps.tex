@@ -1,0 +1,192 @@
+
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\input{glyphtounicode}
+
+% Define custom colors
+\definecolor{primarycolor}{RGB}{0, 102, 204}
+\definecolor{accentcolor}{RGB}{51, 51, 51}
+
+\hypersetup{
+    pdftitle={Anurag Kumar - DevOps SRE Intern Resume},
+    pdfauthor={Anurag Kumar},
+    pdfsubject={Resume for DevOps Internship at TKC, Bangalore},
+    pdfkeywords={
+        Linux, Kubernetes, Terraform, GCP, Jenkins, CI/CD, Docker, Groovy,
+        Prometheus, Grafana, Python, Bash, Infrastructure as Code, SRE
+    }
+}
+
+% Page Geometry
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+
+% Section Formatting with color
+\titleformat{\section}
+  {\vspace{-10pt}\scshape\raggedright\large\color{primarycolor}}
+  {}{0em}{}[\color{primarycolor}\titlerule\vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom Commands with better indentation control
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{accentcolor}#1} & {\small\textit{#2}} \\
+      {\small\textit{#3}} & {\small\textit{#4}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item[]
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & {\small #2}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, rightmargin=0in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+% -------- HEADING --------
+\begin{center}
+    {\Huge\textbf{\color{accentcolor}Anurag Kumar}} \\ \vspace{8pt}
+    \small
+    \faMapMarker* \ Bhilai, India \quad
+    \faPhone \ +91-8827316381 \quad
+    \faEnvelope \ \href{mailto:anuragrko42004@gmail.com}{anuragrko42004@gmail.com}
+    \\ \vspace{4pt}
+    \faGlobe \ \href{http://anuragsite.duckdns.org}{anuragsite.duckdns.org} \quad
+    \faGithub \ \href{https://github.com/Anurag-xo}{github.com/Anurag-xo} \quad
+    \faLinkedin \ \href{https://www.linkedin.com/in/anurag-kumar-b1a790249}{linkedin.com/in/anurag-kumar}
+\end{center}
+\vspace{-15pt}
+
+% -------- SUMMARY --------
+\section{Professional Summary}
+\vspace{2pt}
+Quick learner and passionate \textbf{DevOps/SRE Intern candidate} with hands-on experience in \textbf{Linux system administration}, \textbf{CI/CD automation}, and \textbf{cloud infrastructure management}. Proven expertise in \textbf{containerization} (Docker, Kubernetes), \textbf{infrastructure as code} (Terraform), and \textbf{monitoring solutions} (Prometheus, Grafana). Strong background in building scalable deployment pipelines with \textbf{Jenkins} and \textbf{Git}, combined with collaborative skills in Agile environments. Eager to contribute to TKC's infrastructure automation and system reliability initiatives.
+
+% -------- TECHNICAL SKILLS --------
+\section{Technical Skills}
+\vspace{2pt}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{Cloud Platforms} & GCP, AWS (EC2, S3, Lambda, CloudWatch, IAM), Cloud Infrastructure Design \\
+\textbf{Infrastructure as Code} & Terraform, Configuration Management, Infrastructure Provisioning \\
+\textbf{Containerization} & Docker, Kubernetes, Helm, Container Lifecycle Management \\
+\textbf{CI/CD \& Automation} & Jenkins, GitHub Actions, GitLab CI, Groovy (Basic), Automated Pipelines, Git \\
+\textbf{Monitoring} & Prometheus, Grafana, System Monitoring, Log Aggregation, Alerting \\
+\textbf{Programming} & Python, Bash, Java, SQL, JavaScript/Node.js, YAML \\
+\textbf{Linux Administration} & Ubuntu, CentOS, RHEL, Shell Scripting, System Optimization \\
+\textbf{Databases} & PostgreSQL, MongoDB, MySQL, Database Administration \\
+\textbf{Methodologies} & Agile/Scrum, DevOps Best Practices, SRE Principles, Incident Response \\
+\end{tabularx}
+
+% -------- EXPERIENCE --------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Linux System Administrator \& DevOps Intern}{Oct 2024 -- Dec 2024}
+  {Bhilai Steel Plant}{Bhilai, India}
+  \resumeItemListStart
+    \resumeItem{Managed Linux-based production systems ensuring \textbf{99.9\% uptime} through proactive monitoring and rapid incident response}
+    \resumeItem{Architected automated deployment solutions using Python and Bash scripting, reducing manual deployment time by \textbf{70\%}}
+    \resumeItem{Implemented system monitoring and performance optimization strategies for large-scale data management systems}
+    \resumeItem{Developed infrastructure automation scripts and documentation, establishing best practices for configuration management}
+    \resumeItem{Collaborated with cross-functional teams in Agile environment to design scalable backend applications}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% -------- PROJECTS --------
+\section{DevOps \& Infrastructure Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {\textbf{Cloud-Native Application with CI/CD Pipeline} \href{https://github.com/Anurag-xo/Blog-web}{\faGithub\ GitHub}}{}
+  \resumeItemListStart
+    \resumeItem{Architected complete CI/CD pipeline for full-stack application deployment on AWS using \textbf{Jenkins} and \textbf{GitHub Actions}}
+    \resumeItem{Containerized application using \textbf{Docker} with multi-stage builds, deployed on \textbf{Kubernetes} cluster with \textbf{Helm} charts}
+    \resumeItem{Configured automated deployment with \textbf{Argo CD} implementing health checks and rollback mechanisms}
+    \resumeItem{Managed cloud infrastructure including networking, load balancing, and auto-scaling configurations}
+  \resumeItemListEnd
+  
+\resumeProjectHeading
+  {\textbf{Infrastructure Monitoring Solution with Terraform}}{}
+  \resumeItemListStart
+    \resumeItem{Designed and deployed monitoring system using \textbf{Prometheus} and \textbf{Grafana} for real-time observability}
+    \resumeItem{Automated deployment using \textbf{Terraform} for scalable infrastructure provisioning and configuration management}
+    \resumeItem{Created dashboards for system performance tracking and implemented alerting mechanisms for proactive issue detection}
+  \resumeItemListEnd
+  
+\resumeProjectHeading
+  {\textbf{Microservices Architecture with Event-Driven Infrastructure} \href{https://github.com/Anurag-xo/EmailNotification-microservice}{\faGithub\ GitHub}}{}
+  \resumeItemListStart
+    \resumeItem{Designed scalable microservices using Spring Boot with Apache Kafka, handling \textbf{5,000+ messages/second}}
+    \resumeItem{Implemented containerized deployment strategy with Docker suitable for Kubernetes environments}
+    \resumeItem{Established monitoring and logging infrastructure for microservices enabling real-time system observability}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% -------- EDUCATION --------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Bachelor of Technology in Computer Science \& Engineering (AI/ML)}{2021 -- 2025}
+  {Shri Shankaracharya Technical Campus}{CGPA: 8.2/10 (82\%)}
+  \resumeItemListStart
+    \resumeItem{\textbf{Relevant Coursework}: Data Structures \& Algorithms, Operating Systems, Computer Networks, Distributed Systems}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% -------- CERTIFICATIONS --------
+\section{Certifications \& Additional Information}
+\vspace{2pt}
+\begin{tabularx}{\textwidth}{@{}l X@{}}
+\textbf{Certifications} & AWS Cloud Practitioner, Google Foundations of Cybersecurity \\
+\textbf{Core Strengths} & Quick Learner, Strong Problem-Solving, Proactive Task Ownership, Collaborative Team Player \\
+\textbf{Languages} & English (Professional), Hindi (Native) \\
+\textbf{Availability} & Open to relocation to Bangalore for 6-month internship \\
+\end{tabularx}
+
+\end{document}
+
