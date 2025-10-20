@@ -1,26 +1,86 @@
-A single-page, one-column resume for software developers. It uses the base latex templates and fonts to provide ease of use and installation when trying to update the resume. The different sections are clearly documented and custom commands are used to provide consistent formatting. The three main sections in the resume are education, experience, and projects.
+# LaTeX Resume
 
-### Motivation
+A single-page, one-column resume template for software developers, designed for ease of use and customization. This template uses standard LaTeX fonts and packages to ensure compatibility and a straightforward setup process.
 
-I created this template as managing a resume on Google Docs was hard and changing any formatting was too difficult since it had to be applied in multiple places.
+![Resume Screenshot](resume_preview.png)
 
-Most currently available templates either focus on two columns, or are multiple pages long that didn't work well for career fairs or online applications.
+## Features
 
-### Quick start
+- **Single-Column Layout:** Clean and simple one-column format, ideal for career fairs and online applications.
+- **Consistent Formatting:** Uses custom LaTeX commands for consistent styling across all sections.
+- **Easy to Customize:** Sections are clearly defined and can be easily added or removed.
+- **Multiple Templates:** Comes with a variety of templates to choose from.
+- **Docker Support:** Includes a Dockerfile and build script for a hassle-free, containerized build process.
 
-Get started quickly using [Overleaf](https://www.overleaf.com/latex/templates/software-engineer-resume/gqxmqsvsbdjf) template.
+## Getting Started
 
-### Build using Docker
+### Prerequisites
 
-```sh
-docker build -t latex .
-docker run --rm -i -v "$PWD":/data latex pdflatex anurag_new_resume.tex
+To build the resume locally, you'll need a LaTeX distribution installed on your system. The required packages are:
+
+- `texlive-latex-recommended`
+- `texlive-latex-extra`
+- `texlive-fonts-recommended`
+- `texlive-fonts-extra`
+
+You can typically install these using your system's package manager. For example, on Debian/Ubuntu:
+
+```bash
+sudo apt-get update && sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 ```
 
-### Preview
+### Building the Resume
 
-![Resume Screenshot](/resume_preview.png)
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/your-username/latex-resume.git
+    cd latex-resume
+    ```
 
-### License
+2.  **Compile the LaTeX source:**
+    ```bash
+    pdflatex -output-directory=output src/main.tex
+    ```
+    This will generate the resume PDF in the `output` directory.
 
-Format is MIT but all the data is owned by Sourabh Bajaj.
+## Usage
+
+### Customizing Content
+
+-   **Main File:** The main LaTeX file is `src/main.tex`. This is where you can set your name, contact information, and choose a template.
+-   **Sections:** The resume content is organized into sections located in the `src/sections` directory. You can edit these files to add your own experience, education, and projects.
+
+### Changing Templates
+
+This repository includes several resume templates located in the `src/templates` directory. To use a different template, simply change the `\input` command in `src/main.tex` to point to the desired template file.
+
+For example, to use the `devops_resume.tex` template, you would change:
+
+```latex
+\input{templates/best_code.tex}
+```
+
+to:
+
+```latex
+\input{templates/devops_resume.tex}
+```
+
+## Build using Docker
+
+If you have Docker installed, you can build the resume without needing to install a local LaTeX distribution.
+
+1.  **Build the Docker image and compile the resume:**
+    ```bash
+    ./build.sh
+    ```
+
+This script will build the Docker image and run the container to compile the `main.tex` file, with the resulting PDF saved in the `output` directory.
+
+## Contributing
+
+Contributions are welcome! If you have any suggestions, bug fixes, or improvements, please feel free to open an issue or submit a pull request.
+
+## License
+
+The format of this resume is licensed under the MIT License. However, all personal data and content in the resume belong to the original author.
