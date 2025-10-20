@@ -1,0 +1,183 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{fontawesome5}
+\usepackage{xcolor}
+\usepackage{tabularx}
+\input{glyphtounicode}
+
+% Define colors - professional but visible
+\definecolor{primarycolor}{RGB}{0, 102, 204}
+\definecolor{accentcolor}{RGB}{31, 41, 55}
+
+\hypersetup{
+    pdftitle={Anurag Kumar - DevOps Engineer},
+    pdfauthor={Anurag Kumar},
+    pdfsubject={DevOps Engineer Resume},
+    pdfkeywords={DevOps, AWS, GCP, Kubernetes, Docker, Terraform, CI/CD}
+}
+
+% Page geometry
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.7in}
+\addtolength{\textheight}{1.4in}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+\setlength{\parindent}{0pt}
+
+% Section formatting - clean and scannable
+\titleformat{\section}
+  {\vspace{-10pt}\scshape\raggedright\large\color{primarycolor}}
+  {}{0em}{}[\color{primarycolor}\titlerule\vspace{-5pt}]
+
+\pdfgentounicode=1
+
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{#1 \vspace{-2pt}}
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item[]
+    \begin{tabular*}{\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{\color{accentcolor}#1} & {\small\textit{#2}} \\
+      {\small\textit{#3}} & {\small\textit{#4}} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item[]
+    \begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & {\small #2}
+    \end{tabular*}\vspace{-7pt}
+}
+
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.2in, rightmargin=0in]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-2pt}}
+
+\begin{document}
+
+% -------- HEADING --------
+\begin{center}
+    {\Huge\textbf{\color{accentcolor}Anurag Kumar}} \\ \vspace{8pt}
+    \small
+    Bhilai, India \ $|$ \ +91-8827316381 \ $|$ \ \href{mailto:anuragrko42004@gmail.com}{anuragrko42004@gmail.com}
+    \\ \vspace{4pt}
+    \href{http://anuragsite.duckdns.org}{anuragsite.duckdns.org} \ $|$ \ 
+    \href{https://github.com/Anurag-xo}{github.com/Anurag-xo} \ $|$ \ 
+    \href{https://www.linkedin.com/in/anurag-kumar-b1a790249}{linkedin.com/in/anurag-kumar}
+\end{center}
+\vspace{-15pt}
+
+% -------- TECHNICAL SKILLS (PLACED FIRST - WHAT THEY'RE LOOKING FOR) --------
+\section{Technical Skills}
+\vspace{2pt}
+\small{
+\textbf{Cloud Platforms:} AWS (EC2, S3, Lambda, CloudWatch, IAM, VPC), Google Cloud Platform (Compute Engine, Cloud Functions), Azure \\
+\textbf{CI/CD \& Automation:} Jenkins, GitHub Actions, GitLab CI, Automated Deployment Pipelines \\
+\textbf{Containerization:} Docker, Kubernetes, Helm, Container Orchestration, Multi-Stage Builds \\
+\textbf{Infrastructure as Code:} Terraform, Ansible, CloudFormation, Configuration Management \\
+\textbf{Monitoring \& Logging:} Prometheus, Grafana, CloudWatch, ELK Stack, Log Aggregation \\
+\textbf{System Administration:} Linux (Ubuntu, CentOS, RHEL), Unix, Performance Tuning, Security Hardening \\
+\textbf{Scripting \& Programming:} Python, Bash, Shell Scripting, YAML, Java, JavaScript \\
+\textbf{Version Control:} Git, GitHub, GitLab, Branching Strategies \\
+\textbf{Databases:} PostgreSQL, MongoDB, MySQL, Database Administration \\
+\textbf{Languages:} English (Fluent - Professional Proficiency), Hindi (Native)
+}
+
+% -------- PROFESSIONAL EXPERIENCE --------
+\section{Professional Experience}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {DevOps Engineer}{Oct 2024 -- Dec 2024}
+  {Bhilai Steel Plant}{Bhilai, India}
+  \resumeItemListStart
+    \resumeItem{Designed and maintained cloud infrastructure on AWS and GCP, achieving 99.9\% uptime for production workloads serving 500+ users}
+    \resumeItem{Built CI/CD pipelines using Jenkins and GitHub Actions, reducing deployment time by 70\% and enabling multiple daily releases}
+    \resumeItem{Containerized applications with Docker and managed multi-node Kubernetes clusters with auto-scaling and load balancing}
+    \resumeItem{Implemented Infrastructure as Code using Terraform to provision and manage resources across development, staging, and production environments}
+    \resumeItem{Set up comprehensive monitoring and alerting with Prometheus and Grafana, creating real-time performance dashboards}
+    \resumeItem{Automated system administration tasks with Python and Bash scripts, improving operational efficiency and reducing manual errors}
+    \resumeItem{Reduced infrastructure costs by 30\% through resource optimization, intelligent auto-scaling, and efficient capacity planning}
+    \resumeItem{Collaborated with development teams to ensure secure deployments and address infrastructure requirements in Agile environment}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% -------- PROJECTS --------
+\section{Technical Projects}
+\resumeSubHeadingListStart
+
+\resumeProjectHeading
+  {\textbf{Cloud-Native CI/CD Pipeline \& Kubernetes Deployment} $|$ \href{https://github.com/Anurag-xo/Blog-web}{GitHub}}{}
+  \resumeItemListStart
+    \resumeItem{Built end-to-end CI/CD infrastructure with Jenkins and GitHub Actions for automated testing, building, and deployment}
+    \resumeItem{Containerized full-stack application using Docker multi-stage builds, reducing final image size by 60\%}
+    \resumeItem{Deployed on AWS Kubernetes cluster using Helm charts with rolling updates, health checks, and automatic rollback mechanisms}
+    \resumeItem{Configured Argo CD for GitOps-based continuous deployment with automated sync and version control}
+    \resumeItem{Created Prometheus/Grafana monitoring solution with custom dashboards and alerting rules for proactive incident response}
+  \resumeItemListEnd
+  
+\resumeProjectHeading
+  {\textbf{Infrastructure as Code Automation with Terraform}}{}
+  \resumeItemListStart
+    \resumeItem{Provisioned cloud infrastructure using Terraform across AWS and GCP with reusable, version-controlled modules}
+    \resumeItem{Created Terraform modules for VPC, EC2, RDS, and Kubernetes cluster provisioning with consistent configurations}
+    \resumeItem{Implemented remote state management with S3 backends and workspace isolation for multiple environments}
+    \resumeItem{Automated infrastructure deployment enabling consistent environment replication and reducing configuration drift}
+  \resumeItemListEnd
+  
+\resumeProjectHeading
+  {\textbf{Microservices Container Orchestration} $|$ \href{https://github.com/Anurag-xo/EmailNotification-microservice}{GitHub}}{}
+  \resumeItemListStart
+    \resumeItem{Containerized microservices architecture with Docker, creating optimized images for Java and Python applications}
+    \resumeItem{Deployed on Kubernetes with service discovery, load balancing, and horizontal pod autoscaling based on metrics}
+    \resumeItem{Set up centralized logging with ELK stack and distributed tracing for debugging and performance analysis}
+    \resumeItem{Implemented automated testing and security scanning in CI/CD pipeline for quality assurance}
+  \resumeItemListEnd
+
+\resumeSubHeadingListEnd
+
+% -------- EDUCATION --------
+\section{Education}
+\resumeSubHeadingListStart
+
+\resumeSubheading
+  {Bachelor of Technology in Computer Science \& Engineering (AI/ML)}{2021 -- 2025}
+  {Shri Shankaracharya Technical Campus, Junwani, Chhattisgarh}{CGPA: 8.2/10}
+
+\resumeSubHeadingListEnd
+
+% -------- CERTIFICATIONS --------
+\section{Certifications}
+\vspace{2pt}
+\begin{itemize}[leftmargin=0.2in, rightmargin=0in, itemsep=-2pt]
+  \item AWS Cloud Practitioner
+  \item Google Foundations of Cybersecurity
+\end{itemize}
+
+\end{document}
+
+
