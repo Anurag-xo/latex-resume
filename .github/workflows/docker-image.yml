@@ -8,6 +8,8 @@ jobs:
   compile:
     name: Compile resume pdf
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
