@@ -1,11 +1,9 @@
 name: Docker Image CI
-
 on:
   push:
     branches: [main]
   pull_request:
     branches: [main]
-
 jobs:
   compile:
     name: Compile resume pdf
@@ -13,13 +11,19 @@ jobs:
     steps:
       - name: Check out the repo
         uses: actions/checkout@v4
+
+      - name: Create output directory
+        run: mkdir -p output
+
       - name: Run the build process with Docker
         uses: addnab/docker-run-action@v3
         with:
           image: thomasweise/docker-texlive-full:latest
           options: -v ${{ github.workspace }}:/data
           run: |
-            pdflatex -output-directory=${{ github.workspace }}/output ${{ github.workspace }}/src/main.tex
-      - uses: stefanzweifel/git-auto-commit-action@v5
+            pdflatex -output-directory=/data/output /data/src/main.tex
+
+      - name: Commit generated PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
         with:
           commit_message: Apply pdflatex changes
