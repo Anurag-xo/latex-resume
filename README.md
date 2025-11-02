@@ -2,7 +2,7 @@
 
 A single-page, one-column resume template for software developers, designed for ease of use and customization. This template uses standard LaTeX fonts and packages to ensure compatibility and a straightforward setup process.
 
-![Resume Screenshot](resume_preview.png)
+![Resume Screenshot](resume_preview.jpg)
 
 ## Features
 
@@ -32,6 +32,7 @@ sudo apt-get update && sudo apt-get install texlive-latex-recommended texlive-la
 ### Building the Resume
 
 1.  **Clone the repository:**
+
     ```bash
     git clone https://github.com/your-username/latex-resume.git
     cd latex-resume
@@ -47,8 +48,8 @@ sudo apt-get update && sudo apt-get install texlive-latex-recommended texlive-la
 
 ### Customizing Content
 
--   **Main File:** The main LaTeX file is `src/main.tex`. This is where you can set your name, contact information, and choose a template.
--   **Sections:** The resume content is organized into sections located in the `src/sections` directory. You can edit these files to add your own experience, education, and projects.
+- **Main File:** The main LaTeX file is `src/main.tex`. This is where you can set your name, contact information, and choose a template.
+- **Sections:** The resume content is organized into sections located in the `src/sections` directory. You can edit these files to add your own experience, education, and projects.
 
 ### Changing Templates
 
@@ -84,3 +85,4 @@ Contributions are welcome! If you have any suggestions, bug fixes, or improvemen
 ## License
 
 The format of this resume is licensed under the MIT License. However, all personal data and content in the resume belong to the original author.
+
