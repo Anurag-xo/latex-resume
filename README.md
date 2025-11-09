@@ -1,4 +1,3 @@
-````md
 # 🧾 Modern LaTeX Resume Template for Developers
 
 A **clean, single-page, ATS-friendly LaTeX resume template** built for developers, DevOps engineers, and software professionals.  
@@ -35,7 +34,6 @@ You’ll need a LaTeX distribution installed, such as:
 ```bash
 sudo apt-get update && sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 ```
-````
 
 ---
 
@@ -91,17 +89,6 @@ Other options include:
 - `best_code.tex`
 - `minimal_resume.tex`
 - `modern_resume.tex`
-
----
-
-## 📄 Example Preview
-
-| Template             | Screenshot                                  |
-| -------------------- | ------------------------------------------- |
-| **DevOps Resume**    | ![DevOps Template](preview_devops.jpg)      |
-| **Best Code Resume** | ![Best Code Template](preview_bestcode.jpg) |
-
-👉 _(Optional: Add your own preview images for each template)_
 
 ---
 
