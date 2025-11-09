@@ -1,88 +1,149 @@
-# LaTeX Resume
+````md
+# 🧾 Modern LaTeX Resume Template for Developers
 
-A single-page, one-column resume template for software developers, designed for ease of use and customization. This template uses standard LaTeX fonts and packages to ensure compatibility and a straightforward setup process.
+A **clean, single-page, ATS-friendly LaTeX resume template** built for developers, DevOps engineers, and software professionals.  
+Minimal, customizable, and designed to make your resume stand out — whether it’s for campus placements, tech startups, or FAANG interviews.
 
-![Resume Screenshot](resume_preview.jpg)
+![Resume Preview](resume_preview.jpg)
 
-## Features
+<p align="center">
+  <a href="https://github.com/Anurag-xo/latex-resume/stargazers"><img src="https://img.shields.io/github/stars/Anurag-xo/latex-resume?style=social" alt="GitHub stars"></a>
+  <a href="https://github.com/Anurag-xo/latex-resume/network/members"><img src="https://img.shields.io/github/forks/Anurag-xo/latex-resume?style=social" alt="GitHub forks"></a>
+  <a href="https://github.com/Anurag-xo/latex-resume/issues"><img src="https://img.shields.io/github/issues/Anurag-xo/latex-resume" alt="GitHub issues"></a>
+  <a href="LICENSE"><img src="https://img.shields.io/badge/license-MIT-blue.svg" alt="License"></a>
+</p>
 
-- **Single-Column Layout:** Clean and simple one-column format, ideal for career fairs and online applications.
-- **Consistent Formatting:** Uses custom LaTeX commands for consistent styling across all sections.
-- **Easy to Customize:** Sections are clearly defined and can be easily added or removed.
-- **Multiple Templates:** Comes with a variety of templates to choose from.
-- **Docker Support:** Includes a Dockerfile and build script for a hassle-free, containerized build process.
+---
 
-## Getting Started
+## ✨ Features
 
-### Prerequisites
+✅ **ATS-Friendly Format** – Pass automated screeners with clean, structured LaTeX.  
+✅ **Single-Page Layout** – Ideal for online applications and quick scans.  
+✅ **Developer-Focused Sections** – Projects, Skills, Experience, and Education.  
+✅ **Multiple Templates** – Choose from several layout styles (`devops_resume.tex`, `best_code.tex`, etc.).  
+✅ **Docker Support** – Build easily without installing LaTeX locally.  
+✅ **Fully Customizable** – Edit sections modularly for any role (DevOps, SWE, AI/ML, etc.).
 
-To build the resume locally, you'll need a LaTeX distribution installed on your system. The required packages are:
+---
 
-- `texlive-latex-recommended`
-- `texlive-latex-extra`
-- `texlive-fonts-recommended`
-- `texlive-fonts-extra`
+## 🚀 Quick Start
 
-You can typically install these using your system's package manager. For example, on Debian/Ubuntu:
+### 🧱 Prerequisites
+
+You’ll need a LaTeX distribution installed, such as:
 
 ```bash
 sudo apt-get update && sudo apt-get install texlive-latex-recommended texlive-latex-extra texlive-fonts-recommended texlive-fonts-extra
 ```
+````
 
-### Building the Resume
+---
 
-1.  **Clone the repository:**
+### 🧰 Build Locally
 
-    ```bash
-    git clone https://github.com/your-username/latex-resume.git
-    cd latex-resume
-    ```
+1. **Clone the repo**
 
-2.  **Compile the LaTeX source:**
-    ```bash
-    pdflatex -output-directory=output src/main.tex
-    ```
-    This will generate the resume PDF in the `output` directory.
+   ```bash
+   git clone https://github.com/Anurag-xo/latex-resume.git
+   cd latex-resume
+   ```
 
-## Usage
+2. **Compile your resume**
 
-### Customizing Content
+   ```bash
+   pdflatex -output-directory=output src/main.tex
+   ```
 
-- **Main File:** The main LaTeX file is `src/main.tex`. This is where you can set your name, contact information, and choose a template.
-- **Sections:** The resume content is organized into sections located in the `src/sections` directory. You can edit these files to add your own experience, education, and projects.
+3. **View output**
+   - The PDF will appear in the `output/` folder.
 
-### Changing Templates
+---
 
-This repository includes several resume templates located in the `src/templates` directory. To use a different template, simply change the `\input` command in `src/main.tex` to point to the desired template file.
+### 🐳 Build Using Docker (Recommended)
 
-For example, to use the `devops_resume.tex` template, you would change:
+Don’t want to install LaTeX locally? Use Docker.
 
-```latex
-\input{templates/best_code.tex}
+```bash
+./build.sh
 ```
 
-to:
+This builds the Docker image and compiles your `main.tex` automatically.
+
+---
+
+## 🧩 Customize Your Resume
+
+### 🔧 Modify Content
+
+- Edit `src/main.tex` to change your **name, title, and contact info**.
+- Update section files in `src/sections/` (e.g., `experience.tex`, `projects.tex`) to match your data.
+
+### 🎨 Change Template
+
+Choose a different style from `src/templates/`:
 
 ```latex
 \input{templates/devops_resume.tex}
 ```
 
-## Build using Docker
+Other options include:
 
-If you have Docker installed, you can build the resume without needing to install a local LaTeX distribution.
+- `best_code.tex`
+- `minimal_resume.tex`
+- `modern_resume.tex`
 
-1.  **Build the Docker image and compile the resume:**
-    ```bash
-    ./build.sh
-    ```
+---
 
-This script will build the Docker image and run the container to compile the `main.tex` file, with the resulting PDF saved in the `output` directory.
+## 📄 Example Preview
 
-## Contributing
+| Template             | Screenshot                                  |
+| -------------------- | ------------------------------------------- |
+| **DevOps Resume**    | ![DevOps Template](preview_devops.jpg)      |
+| **Best Code Resume** | ![Best Code Template](preview_bestcode.jpg) |
 
-Contributions are welcome! If you have any suggestions, bug fixes, or improvements, please feel free to open an issue or submit a pull request.
+👉 _(Optional: Add your own preview images for each template)_
 
-## License
+---
 
-The format of this resume is licensed under the MIT License. However, all personal data and content in the resume belong to the original author.
+## ☁️ Overleaf Version (Optional)
 
+You can edit it online directly on Overleaf:
+🔗 [Open in Overleaf](#) _(Replace with your Overleaf template link once published)_
+
+---
+
+## 🌱 Contributing
+
+Contributions are **welcome**!
+You can:
+
+- Add new templates or styles 🎨
+- Improve build scripts 🧩
+- Fix bugs or formatting 🪲
+- Share your customized versions 💼
+
+1. Fork this repo 🍴
+2. Create a new branch
+3. Commit your changes
+4. Submit a PR 🚀
+
+---
+
+## 🧠 Keywords
+
+`latex resume`, `developer cv`, `modern resume template`, `ats resume`,
+`overleaf resume`, `software engineer resume`, `devops resume`, `open source`
+
+---
+
+## 🪪 License
+
+This project is licensed under the **MIT License**.
+All personal data and example content belong to their respective authors.
+
+---
+
+<p align="center">
+  ⭐ If you like this project, consider giving it a star — it helps more developers discover it!
+</p>
+```
